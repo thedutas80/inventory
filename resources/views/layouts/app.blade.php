@@ -30,8 +30,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a href="3" class="nav-link">Barang Masuk</a></li>
-                        <li class="nav-item"><a href="3" class="nav-link">Barang Keluar</a></li>
+                        <li class="nav-item"><a href="{{ route('products.index') }}" class="nav-link">Barang Masuk</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Barang Keluar</a></li>
                        
 
 
