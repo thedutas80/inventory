@@ -1,5 +1,5 @@
-@extends('layouts.app')
 
+@extends('layouts.app')
 @section('content')
 
 <div class="container">
@@ -45,4 +45,4 @@
                 @endforeach
     </table>
 </div>
-@endsction
+</div>

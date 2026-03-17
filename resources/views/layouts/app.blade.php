@@ -18,7 +18,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                                      Inventory
@@ -30,11 +30,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a href="{{ route('products.index') }}" class="nav-link">Barang Masuk</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Barang Keluar</a></li>
-                       
-
-
+                        @auth
+                            <li class="nav-item"><a href="{{ route('products.index') }}" class="nav-link">Barang Masuk</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Barang Keluar</a></li>
+                        @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -76,7 +75,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4 mt-20">
             @yield('content')
         </main>
     </div>
