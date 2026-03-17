@@ -4,7 +4,7 @@
 
 <div class="container">
 <h4 class="mb-4">All Products</h4>
-<a href="#" class="btn btn-primary">Create Product</a>
+<a href="{{ route('products.create') }}" class="btn btn-primary">Create Product</a>
 
 <div class="table-responsive mt-3 ">
     <table class="table table-striped table-hover">
@@ -28,13 +28,13 @@
                     {{ $item->name }}
                   </td>
                   <td>
-                    {{ $item->price }}
+                    Rp. {{ number_format($item->price, 0, ',', '.') }}
                   </td>
                   <td>
                     {{ $item->description }}
                   </td>
                   <td>
-                    <img src="https://images.unsplash.com/photo-1761839258044-e59f324b5a7f?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="width: 50px; height: 50px; object-fit: cover;" alt="{{ $item->name }}">
+                    <img src="{{ Storage::url($item->image) }}" style="width: 50px; height: 50px; object-fit: cover;" alt="{{ $item->name }}">
                   </td>
 
                   <td>

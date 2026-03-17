@@ -20,7 +20,9 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('products', App\Http\Controllers\ProductController::class);
 
+
     // Auth Routes
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
 });
 ?>

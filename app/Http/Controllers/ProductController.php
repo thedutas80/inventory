@@ -24,7 +24,10 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $products = Product::all();
+        return view('pages.product.create', [
+            'title' => 'tambah produk'
+        ]);
     }
 
     /**
@@ -32,7 +35,11 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request-> all();
+        $data['image'] = $request->file('image')->store('assets/product', 'public');
+
+        Product::create($data);
+        return redirect()->route('products.index');
     }
 
     /**
