@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use Illuminate\Container\Attributes\Storage;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -87,6 +88,9 @@ if ($request->hasFile('image')) {
      */
     public function destroy($id)
     {
-        //
+
+
+        Product::findorfail($id)->delete();
+        return redirect()->route('products.index');
     }
 }
