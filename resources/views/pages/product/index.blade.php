@@ -38,7 +38,7 @@
                   </td>
 
                   <td>
-                   <a href="#" class="btn btn-sm btn-warning text-white">Edit</a>
+                   <a href="{{ route('products.edit', $item->id) }}" class="btn btn-sm btn-warning text-white">Edit</a>
                    <a href="#" class="btn btn-sm btn-danger">Delete</a>
                   </td>
                 </tr>
