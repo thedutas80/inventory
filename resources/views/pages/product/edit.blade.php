@@ -44,6 +44,19 @@
             >
         </div>
 
+                <!-- Price -->
+
+        <div class="mb-3">
+            <label for="stock" class="form-label">Stock</label>
+            <input 
+                type="number" 
+                class="form-control" 
+                id="stock" 
+                name="stock" 
+              value="{{ $product->stock }}"
+            >
+        </div>
+
         <!-- Description -->
         <div class="mb-3">
             <label for="description" class="form-label">Description</label>

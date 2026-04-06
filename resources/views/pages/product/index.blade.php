@@ -5,7 +5,7 @@
 <div class="container">
 <h4 class="mb-4">All Products</h4>
 <a href="{{ route('products.create') }}" class="btn btn-primary">Create Product</a>
-
+<title>@yield('title', 'Toko Online') | Brand Kita</title>
 <div class="table-responsive mt-3 ">
     <table class="table table-striped table-hover">
      <thead>
@@ -13,6 +13,7 @@
                 <th scope="col">No</th>
                 <th scope="col">Nama</th>
                 <th scope="col">Price</th>
+                <th scope="col">Stock</th>
                 <th scope="col">Description</th>
                 <th scope="col">Image</th>
                 <th scope="col">Action</th>
@@ -29,6 +30,9 @@
                   </td>
                   <td>
                     Rp. {{ number_format($item->price, 0, ',', '.') }}
+                  </td>
+                  <td>
+                    {{ $item->stock }} pcs
                   </td>
                   <td>
                     {{ $item->description }}
